@@ -10,13 +10,9 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -50,13 +46,10 @@
 
       <% @profiles.each do |profile| %>
       <tr>
-        <!-- Display profile.id start -->
         <td>
           <%= profile.id %>
         </td>
-        <!-- Display profile.id end -->
 
-        <!-- Display profile.user_id start -->
         <td>
           <% if profile.user.present? %>
             <a href="/users/<%= profile.user.id %>">
@@ -64,25 +57,18 @@
             </a>
           <% end %>
         </td>
-        <!-- Display profile.user_id end -->
 
-        <!-- Display profile.personal_lift_totals start -->
         <td>
           <%= profile.personal_lift_totals %>
         </td>
-        <!-- Display profile.personal_lift_totals end -->
 
-        <!-- Display profile.created_at start -->
         <td>
           <%= time_ago_in_words(profile.created_at) %> ago
         </td>
-        <!-- Display profile.created_at end -->
 
-        <!-- Display profile.updated_at start -->
         <td>
           <%= time_ago_in_words(profile.updated_at) %> ago
         </td>
-        <!-- Display profile.updated_at end -->
 
         <td>
           <a href="/profiles/<%= profile.id %>">

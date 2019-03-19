@@ -10,26 +10,20 @@
   <ul class="list-group list-group-flush">
     <% @feed.totals.each do |total| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/totals/<%= total.id %>">
           <%= total.profile_id %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <a href="/delete_total_from_feed/<%= total.id %>">
           Delete
         </a>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="feed_totals_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "feed_templates/feed_totals_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

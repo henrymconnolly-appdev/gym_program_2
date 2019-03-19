@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link breakdown start -->
       <div class="col">
         <a href="/breakdowns/<%= @breakdown.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit breakdown
         </a>
       </div>
-      <!-- Edit link breakdown end -->
 
-      <!-- Delete link breakdown start -->
       <div class="col">
         <a href="/delete_breakdown/<%= @breakdown.id %>" class="btn btn-block btn-outline-secondary">
           Delete breakdown
         </a>
       </div>
-      <!-- Delete link breakdown end -->
     </div>
 
     <dl>
       <dt>
         Total
       </dt>
-      <!-- Display total_id start -->
       <dd>
         <% if @breakdown.total.present? %>
           <a href="/totals/<%= @breakdown.total_id %>">
@@ -40,64 +35,49 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display total_id end -->
 
       <dt>
         Squat
       </dt>
-      <!-- Display squat start -->
       <dd>
         <%= @breakdown.squat %>
       </dd>
-      <!-- Display squat end -->
 
       <dt>
         Benchpress
       </dt>
-      <!-- Display benchpress start -->
       <dd>
         <%= @breakdown.benchpress %>
       </dd>
-      <!-- Display benchpress end -->
 
       <dt>
         Deadlift
       </dt>
-      <!-- Display deadlift start -->
       <dd>
         <%= @breakdown.deadlift %>
       </dd>
-      <!-- Display deadlift end -->
 
       <dt>
         Explained lift total
       </dt>
-      <!-- Display explained_lift_total start -->
       <dd>
         <%= @breakdown.explained_lift_total %>
       </dd>
-      <!-- Display explained_lift_total end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@breakdown.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@breakdown.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

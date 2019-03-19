@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link total start -->
       <div class="col">
         <a href="/totals/<%= @total.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit total
         </a>
       </div>
-      <!-- Edit link total end -->
 
-      <!-- Delete link total start -->
       <div class="col">
         <a href="/delete_total/<%= @total.id %>" class="btn btn-block btn-outline-secondary">
           Delete total
         </a>
       </div>
-      <!-- Delete link total end -->
     </div>
 
     <dl>
       <dt>
         Profile
       </dt>
-      <!-- Display profile_id start -->
       <dd>
         <% if @total.profile.present? %>
           <a href="/profiles/<%= @total.profile_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display profile_id end -->
 
       <dt>
         Feed
       </dt>
-      <!-- Display feed_id start -->
       <dd>
         <% if @total.feed.present? %>
           <a href="/feeds/<%= @total.feed_id %>">
@@ -53,30 +46,24 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display feed_id end -->
 
       <dt>
         Lift total
       </dt>
-      <!-- Display lift_total start -->
       <dd>
         <%= @total.lift_total %>
       </dd>
-      <!-- Display lift_total end -->
 
       <dt>
         Lift date
       </dt>
-      <!-- Display lift_date start -->
       <dd>
         <%= @total.lift_date %>
       </dd>
-      <!-- Display lift_date end -->
 
       <dt>
         Subscription
       </dt>
-      <!-- Display subscription_id start -->
       <dd>
         <% if @total.subscription.present? %>
           <a href="/subscriptions/<%= @total.subscription_id %>">
@@ -84,28 +71,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display subscription_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@total.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@total.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
