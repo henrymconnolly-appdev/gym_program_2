@@ -1,6 +1,9 @@
 class Total < ApplicationRecord
   # Direct associations
 
+  belongs_to :profile,
+             :counter_cache => true
+
   belongs_to :feed,
              :required => false
 
