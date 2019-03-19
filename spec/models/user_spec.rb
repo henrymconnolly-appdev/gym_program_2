@@ -4,6 +4,8 @@ RSpec.describe User, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_one(:profile) }
+
     it { should have_one(:feed) }
 
     end
