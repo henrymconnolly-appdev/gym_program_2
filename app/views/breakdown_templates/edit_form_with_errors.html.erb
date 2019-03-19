@@ -24,7 +24,7 @@
     </label>
 
     <!-- Input for total_id start -->
-    <input type="text" id="total_id" name="total_id" class="form-control" value="<%= @breakdown.total_id %>">
+    <%= select_tag(:total_id, options_from_collection_for_select(Total.all, :id, :profile_id, @breakdown.total_id), :class => "form-control") %>
     <!-- Input for total_id end -->
   </div>
   <!-- Label and input for total_id end -->
