@@ -1,0 +1,80 @@
+<!-- Validation failure messages -->
+<% if @feed.present? %>
+  <% if @feed.errors.any? %>
+    <% @feed.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new feed
+</h1>
+
+
+<hr>
+
+<!-- Form feed start -->
+<form action="/create_feed" method="post">
+<!-- Form feed end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @feed.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for subscribed_lift_totals start -->
+  <div class="form-group">
+    <label for="subscribed_lift_totals">
+      Subscribed lift totals
+    </label>
+
+    <!-- Input for subscribed_lift_totals start -->
+    <input type="text" id="subscribed_lift_totals" name="subscribed_lift_totals" class="form-control" value="<%= @feed.subscribed_lift_totals %>">
+    <!-- Input for subscribed_lift_totals end -->
+  </div>
+  <!-- Label and input for subscribed_lift_totals end -->
+
+  <!-- Label and input for subscribed_lift_dates start -->
+  <div class="form-group">
+    <label for="subscribed_lift_dates">
+      Subscribed lift dates
+    </label>
+
+    <!-- Input for subscribed_lift_dates start -->
+    <input type="text" id="subscribed_lift_dates" name="subscribed_lift_dates" class="form-control" value="<%= @feed.subscribed_lift_dates %>">
+    <!-- Input for subscribed_lift_dates end -->
+  </div>
+  <!-- Label and input for subscribed_lift_dates end -->
+
+  <!-- Label and input for subscribed_lift_username start -->
+  <div class="form-group">
+    <label for="subscribed_lift_username">
+      Subscribed lift username
+    </label>
+
+    <!-- Input for subscribed_lift_username start -->
+    <input type="text" id="subscribed_lift_username" name="subscribed_lift_username" class="form-control" value="<%= @feed.subscribed_lift_username %>">
+    <!-- Input for subscribed_lift_username end -->
+  </div>
+  <!-- Label and input for subscribed_lift_username end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create feed
+  </button>
+</form>
+
+<hr>
+
+<a href="/feeds">
+  Go back
+</a>
