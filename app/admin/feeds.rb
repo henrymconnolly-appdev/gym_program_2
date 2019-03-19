@@ -1,4 +1,6 @@
 ActiveAdmin.register Feed do
+
+ permit_params :user_id, :subscribed_lift_totals, :subscribed_lift_dates, :subscribed_lift_username
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
