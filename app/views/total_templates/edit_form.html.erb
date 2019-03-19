@@ -1,0 +1,80 @@
+<h1>
+  Edit total #<%= @total.id %>
+</h1>
+
+<hr>
+
+<!-- Form total start -->
+<form action="/update_total/<%= @total.id %>" method="post">
+<!-- Form total end -->
+
+  <!-- Label and input for profile_id start -->
+  <div class="form-group">
+    <label for="profile_id">
+      Profile
+    </label>
+
+    <!-- Input for profile_id start -->
+    <input type="text" id="profile_id" name="profile_id" class="form-control" value="<%= @total.profile_id %>">
+    <!-- Input for profile_id end -->
+  </div>
+  <!-- Label and input for profile_id end -->
+
+  <!-- Label and input for feed_id start -->
+  <div class="form-group">
+    <label for="feed_id">
+      Feed
+    </label>
+
+    <!-- Input for feed_id start -->
+    <input type="text" id="feed_id" name="feed_id" class="form-control" value="<%= @total.feed_id %>">
+    <!-- Input for feed_id end -->
+  </div>
+  <!-- Label and input for feed_id end -->
+
+  <!-- Label and input for lift_total start -->
+  <div class="form-group">
+    <label for="lift_total">
+      Lift total
+    </label>
+
+    <!-- Input for lift_total start -->
+    <input type="text" id="lift_total" name="lift_total" class="form-control" value="<%= @total.lift_total %>">
+    <!-- Input for lift_total end -->
+  </div>
+  <!-- Label and input for lift_total end -->
+
+  <!-- Label and input for lift_date start -->
+  <div class="form-group">
+    <label for="lift_date">
+      Lift date
+    </label>
+
+    <!-- Input for lift_date start -->
+    <input type="text" id="lift_date" name="lift_date" class="form-control" value="<%= @total.lift_date %>">
+    <!-- Input for lift_date end -->
+  </div>
+  <!-- Label and input for lift_date end -->
+
+  <!-- Label and input for subscription_id start -->
+  <div class="form-group">
+    <label for="subscription_id">
+      Subscription
+    </label>
+
+    <!-- Input for subscription_id start -->
+    <input type="text" id="subscription_id" name="subscription_id" class="form-control" value="<%= @total.subscription_id %>">
+    <!-- Input for subscription_id end -->
+  </div>
+  <!-- Label and input for subscription_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update total
+  </button>
+</form>
+
+<hr>
+
+<a href="/totals">
+  Go back
+</a>
