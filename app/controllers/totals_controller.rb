@@ -59,6 +59,30 @@ class TotalsController < ApplicationController
     end
   end
 
+  def destroy_row_from_feed
+    @total = Total.find(params.fetch("id_to_remove"))
+
+    @total.destroy
+
+    redirect_to("/feeds/#{@total.feed_id}", notice: "Total deleted successfully.")
+  end
+
+  def destroy_row_from_profile
+    @total = Total.find(params.fetch("id_to_remove"))
+
+    @total.destroy
+
+    redirect_to("/profiles/#{@total.profile_id}", notice: "Total deleted successfully.")
+  end
+
+  def destroy_row_from_subscription
+    @total = Total.find(params.fetch("id_to_remove"))
+
+    @total.destroy
+
+    redirect_to("/subscriptions/#{@total.subscription_id}", notice: "Total deleted successfully.")
+  end
+
   def destroy_row
     @total = Total.find(params.fetch("id_to_remove"))
 
