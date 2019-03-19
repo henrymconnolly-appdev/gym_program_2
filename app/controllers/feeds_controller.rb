@@ -6,6 +6,8 @@ class FeedsController < ApplicationController
   end
 
   def show
+    @subscription = Subscription.new
+    @total = Total.new
     @feed = Feed.find(params.fetch("id_to_display"))
 
     render("feed_templates/show.html.erb")

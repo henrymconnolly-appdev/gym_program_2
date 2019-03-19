@@ -6,6 +6,7 @@ class SubscriptionsController < ApplicationController
   end
 
   def show
+    @total = Total.new
     @subscription = Subscription.find(params.fetch("id_to_display"))
 
     render("subscription_templates/show.html.erb")
@@ -26,6 +27,20 @@ class SubscriptionsController < ApplicationController
       @subscription.save
 
       redirect_back(:fallback_location => "/subscriptions", :notice => "Subscription created successfully.")
+    else
+      render("subscription_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_feed
+    @subscription = Subscription.new
+
+    @subscription.feed_id = params.fetch("feed_id")
+
+    if @subscription.valid?
+      @subscription.save
+
+      redirect_to("/feeds/#{@subscription.feed_id}", notice: "Subscription created successfully.")
     else
       render("subscription_templates/new_form_with_errors.html.erb")
     end

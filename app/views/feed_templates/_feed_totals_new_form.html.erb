@@ -1,0 +1,61 @@
+<!-- Form total start -->
+<form action="/create_total_from_feed" method="post">
+<!-- Form total end -->
+
+  <!-- Label and input for profile_id start -->
+  <div class="form-group">
+    <label for="profile_id">
+      Profile
+    </label>
+
+    <!-- Input for profile_id start -->
+    <input type="text" id="profile_id" name="profile_id" class="form-control" value="<%= @total.profile_id %>">
+    <!-- Input for profile_id end -->
+  </div>
+  <!-- Label and input for profile_id end -->
+
+  <!-- Label and input for feed_id start -->
+  <!-- Input for feed_id start -->
+  <input type="hidden" name="feed_id" value="<%= @feed.id %>">
+  <!-- Input for feed_id end -->
+
+  <!-- Label and input for lift_total start -->
+  <div class="form-group">
+    <label for="lift_total">
+      Lift total
+    </label>
+
+    <!-- Input for lift_total start -->
+    <input type="text" id="lift_total" name="lift_total" class="form-control" value="<%= @total.lift_total %>">
+    <!-- Input for lift_total end -->
+  </div>
+  <!-- Label and input for lift_total end -->
+
+  <!-- Label and input for lift_date start -->
+  <div class="form-group">
+    <label for="lift_date">
+      Lift date
+    </label>
+
+    <!-- Input for lift_date start -->
+    <input type="text" id="lift_date" name="lift_date" class="form-control" value="<%= @total.lift_date %>">
+    <!-- Input for lift_date end -->
+  </div>
+  <!-- Label and input for lift_date end -->
+
+  <!-- Label and input for subscription_id start -->
+  <div class="form-group">
+    <label for="subscription_id">
+      Subscription
+    </label>
+
+    <!-- Input for subscription_id start -->
+    <input type="text" id="subscription_id" name="subscription_id" class="form-control" value="<%= @total.subscription_id %>">
+    <!-- Input for subscription_id end -->
+  </div>
+  <!-- Label and input for subscription_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create total
+  </button>
+</form>

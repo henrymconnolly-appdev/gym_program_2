@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/subscriptions/new", { :controller => "subscriptions", :action => "new_form" })
   post("/create_subscription", { :controller => "subscriptions", :action => "create_row" })
+  post("/create_subscription_from_feed", { :controller => "subscriptions", :action => "create_row_from_feed" })
 
   # READ
   get("/subscriptions", { :controller => "subscriptions", :action => "index" })
@@ -84,6 +85,9 @@ Rails.application.routes.draw do
   # CREATE
   get("/totals/new", { :controller => "totals", :action => "new_form" })
   post("/create_total", { :controller => "totals", :action => "create_row" })
+  post("/create_total_from_subscription", { :controller => "totals", :action => "create_row_from_subscription" })
+  post("/create_total_from_profile", { :controller => "totals", :action => "create_row_from_profile" })
+  post("/create_total_from_feed", { :controller => "totals", :action => "create_row_from_feed" })
 
   # READ
   get("/totals", { :controller => "totals", :action => "index" })

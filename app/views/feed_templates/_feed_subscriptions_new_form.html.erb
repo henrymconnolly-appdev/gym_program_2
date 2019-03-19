@@ -1,0 +1,13 @@
+<!-- Form subscription start -->
+<form action="/create_subscription_from_feed" method="post">
+<!-- Form subscription end -->
+
+  <!-- Label and input for feed_id start -->
+  <!-- Input for feed_id start -->
+  <input type="hidden" name="feed_id" value="<%= @feed.id %>">
+  <!-- Input for feed_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create subscription
+  </button>
+</form>

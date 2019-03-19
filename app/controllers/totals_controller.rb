@@ -35,6 +35,60 @@ class TotalsController < ApplicationController
     end
   end
 
+  def create_row_from_feed
+    @total = Total.new
+
+    @total.profile_id = params.fetch("profile_id")
+    @total.feed_id = params.fetch("feed_id")
+    @total.lift_total = params.fetch("lift_total")
+    @total.lift_date = params.fetch("lift_date")
+    @total.subscription_id = params.fetch("subscription_id")
+
+    if @total.valid?
+      @total.save
+
+      redirect_to("/feeds/#{@total.feed_id}", notice: "Total created successfully.")
+    else
+      render("total_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_profile
+    @total = Total.new
+
+    @total.profile_id = params.fetch("profile_id")
+    @total.feed_id = params.fetch("feed_id")
+    @total.lift_total = params.fetch("lift_total")
+    @total.lift_date = params.fetch("lift_date")
+    @total.subscription_id = params.fetch("subscription_id")
+
+    if @total.valid?
+      @total.save
+
+      redirect_to("/profiles/#{@total.profile_id}", notice: "Total created successfully.")
+    else
+      render("total_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_subscription
+    @total = Total.new
+
+    @total.profile_id = params.fetch("profile_id")
+    @total.feed_id = params.fetch("feed_id")
+    @total.lift_total = params.fetch("lift_total")
+    @total.lift_date = params.fetch("lift_date")
+    @total.subscription_id = params.fetch("subscription_id")
+
+    if @total.valid?
+      @total.save
+
+      redirect_to("/subscriptions/#{@total.subscription_id}", notice: "Total created successfully.")
+    else
+      render("total_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @total = Total.find(params.fetch("prefill_with_id"))
 
