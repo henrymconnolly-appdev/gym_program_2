@@ -1,0 +1,80 @@
+<h1>
+  Edit breakdown #<%= @breakdown.id %>
+</h1>
+
+<hr>
+
+<!-- Form breakdown start -->
+<form action="/update_breakdown/<%= @breakdown.id %>" method="post">
+<!-- Form breakdown end -->
+
+  <!-- Label and input for total_id start -->
+  <div class="form-group">
+    <label for="total_id">
+      Total
+    </label>
+
+    <!-- Input for total_id start -->
+    <input type="text" id="total_id" name="total_id" class="form-control" value="<%= @breakdown.total_id %>">
+    <!-- Input for total_id end -->
+  </div>
+  <!-- Label and input for total_id end -->
+
+  <!-- Label and input for squat start -->
+  <div class="form-group">
+    <label for="squat">
+      Squat
+    </label>
+
+    <!-- Input for squat start -->
+    <input type="text" id="squat" name="squat" class="form-control" value="<%= @breakdown.squat %>">
+    <!-- Input for squat end -->
+  </div>
+  <!-- Label and input for squat end -->
+
+  <!-- Label and input for benchpress start -->
+  <div class="form-group">
+    <label for="benchpress">
+      Benchpress
+    </label>
+
+    <!-- Input for benchpress start -->
+    <input type="text" id="benchpress" name="benchpress" class="form-control" value="<%= @breakdown.benchpress %>">
+    <!-- Input for benchpress end -->
+  </div>
+  <!-- Label and input for benchpress end -->
+
+  <!-- Label and input for deadlift start -->
+  <div class="form-group">
+    <label for="deadlift">
+      Deadlift
+    </label>
+
+    <!-- Input for deadlift start -->
+    <input type="text" id="deadlift" name="deadlift" class="form-control" value="<%= @breakdown.deadlift %>">
+    <!-- Input for deadlift end -->
+  </div>
+  <!-- Label and input for deadlift end -->
+
+  <!-- Label and input for explained_lift_total start -->
+  <div class="form-group">
+    <label for="explained_lift_total">
+      Explained lift total
+    </label>
+
+    <!-- Input for explained_lift_total start -->
+    <input type="text" id="explained_lift_total" name="explained_lift_total" class="form-control" value="<%= @breakdown.explained_lift_total %>">
+    <!-- Input for explained_lift_total end -->
+  </div>
+  <!-- Label and input for explained_lift_total end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update breakdown
+  </button>
+</form>
+
+<hr>
+
+<a href="/breakdowns">
+  Go back
+</a>

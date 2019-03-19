@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Breakdown resource:
+
+  # CREATE
+  get("/breakdowns/new", { :controller => "breakdowns", :action => "new_form" })
+  post("/create_breakdown", { :controller => "breakdowns", :action => "create_row" })
+
+  # READ
+  get("/breakdowns", { :controller => "breakdowns", :action => "index" })
+  get("/breakdowns/:id_to_display", { :controller => "breakdowns", :action => "show" })
+
+  # UPDATE
+  get("/breakdowns/:prefill_with_id/edit", { :controller => "breakdowns", :action => "edit_form" })
+  post("/update_breakdown/:id_to_modify", { :controller => "breakdowns", :action => "update_row" })
+
+  # DELETE
+  get("/delete_breakdown/:id_to_remove", { :controller => "breakdowns", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Subscription resource:
 
   # CREATE
