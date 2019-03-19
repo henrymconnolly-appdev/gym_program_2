@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "totals#index"
   # Routes for the Breakdown resource:
 
   # CREATE
