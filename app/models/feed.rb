@@ -1,6 +1,9 @@
 class Feed < ApplicationRecord
   # Direct associations
 
+  has_many   :subscriptions,
+             :dependent => :destroy
+
   has_many   :totals,
              :dependent => :destroy
 
