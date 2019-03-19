@@ -70,13 +70,21 @@
 
         <!-- Display total.profile_id start -->
         <td>
-          <%= total.profile.user_id %>
+          <% if total.profile.present? %>
+            <a href="/profiles/<%= total.profile.id %>">
+              <%= total.profile.user_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display total.profile_id end -->
 
         <!-- Display total.feed_id start -->
         <td>
-          <%= total.feed.user_id %>
+          <% if total.feed.present? %>
+            <a href="/feeds/<%= total.feed.id %>">
+              <%= total.feed.user_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display total.feed_id end -->
 
@@ -94,7 +102,11 @@
 
         <!-- Display total.subscription_id start -->
         <td>
-          <%= total.subscription.feed_id %>
+          <% if total.subscription.present? %>
+            <a href="/subscriptions/<%= total.subscription.id %>">
+              <%= total.subscription.feed_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display total.subscription_id end -->
 

@@ -34,7 +34,11 @@
       </dt>
       <!-- Display feed_id start -->
       <dd>
-        <%= @subscription.feed_id %>
+        <% if @subscription.feed.present? %>
+          <a href="/feeds/<%= @subscription.feed_id %>">
+            <%= @subscription.feed.user_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display feed_id end -->
 

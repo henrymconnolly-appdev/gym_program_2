@@ -34,7 +34,11 @@
       </dt>
       <!-- Display total_id start -->
       <dd>
-        <%= @breakdown.total_id %>
+        <% if @breakdown.total.present? %>
+          <a href="/totals/<%= @breakdown.total_id %>">
+            <%= @breakdown.total.profile_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display total_id end -->
 

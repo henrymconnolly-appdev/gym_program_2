@@ -34,7 +34,11 @@
       </dt>
       <!-- Display profile_id start -->
       <dd>
-        <%= @total.profile_id %>
+        <% if @total.profile.present? %>
+          <a href="/profiles/<%= @total.profile_id %>">
+            <%= @total.profile.user_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display profile_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display feed_id start -->
       <dd>
-        <%= @total.feed_id %>
+        <% if @total.feed.present? %>
+          <a href="/feeds/<%= @total.feed_id %>">
+            <%= @total.feed.user_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display feed_id end -->
 
@@ -70,7 +78,11 @@
       </dt>
       <!-- Display subscription_id start -->
       <dd>
-        <%= @total.subscription_id %>
+        <% if @total.subscription.present? %>
+          <a href="/subscriptions/<%= @total.subscription_id %>">
+            <%= @total.subscription.feed_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display subscription_id end -->
 

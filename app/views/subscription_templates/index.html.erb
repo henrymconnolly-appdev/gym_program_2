@@ -54,7 +54,11 @@
 
         <!-- Display subscription.feed_id start -->
         <td>
-          <%= subscription.feed.user_id %>
+          <% if subscription.feed.present? %>
+            <a href="/feeds/<%= subscription.feed.id %>">
+              <%= subscription.feed.user_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display subscription.feed_id end -->
 
