@@ -1,6 +1,7 @@
 class BreakdownsController < ApplicationController
   def index
-    @breakdowns = Breakdown.page(params[:page]).per(10)
+    @q = Breakdown.ransack(params[:q])
+    @breakdowns = @q.result(:distinct => true).includes(:total).page(params[:page]).per(10)
 
     render("breakdown_templates/index.html.erb")
   end

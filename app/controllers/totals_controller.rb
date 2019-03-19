@@ -1,6 +1,7 @@
 class TotalsController < ApplicationController
   def index
-    @totals = Total.page(params[:page]).per(10)
+    @q = Total.ransack(params[:q])
+    @totals = @q.result(:distinct => true).includes(:breakdown, :feed, :profile, :subscription).page(params[:page]).per(10)
 
     render("total_templates/index.html.erb")
   end
