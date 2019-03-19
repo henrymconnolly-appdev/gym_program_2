@@ -4,6 +4,8 @@ RSpec.describe Total, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:subscription) }
+
     it { should belong_to(:profile) }
 
     it { should belong_to(:feed) }

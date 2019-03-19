@@ -1,6 +1,9 @@
 class Total < ApplicationRecord
   # Direct associations
 
+  belongs_to :subscription,
+             :required => false
+
   belongs_to :profile,
              :counter_cache => true
 
