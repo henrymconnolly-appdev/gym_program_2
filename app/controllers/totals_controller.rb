@@ -1,6 +1,6 @@
 class TotalsController < ApplicationController
   def index
-    @totals = Total.all
+    @totals = Total.page(params[:page]).per(10)
 
     render("total_templates/index.html.erb")
   end
